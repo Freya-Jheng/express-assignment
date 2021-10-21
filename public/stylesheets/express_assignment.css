@@ -1,0 +1,21 @@
+.container {
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 100px;
+  color: darkorange;
+  border-bottom: 2px solid red;
+}
+
+.content {
+  padding-top: 100px;
+  text-align: center;
+}
+
