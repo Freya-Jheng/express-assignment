@@ -14,17 +14,15 @@ app.use(express.static('public'))
 
 // set up root
 app.get('/', (req, res) => {
-  const content = {
-    title: '首頁',
-  }
-  res.render('index', {content: content.title})
+  const pageName = 'Welcome to visit our homepage !'
+  res.render('index', {pageName})
 })
 
-app.get('/:content', (req, res)=> {
-  const title = 'show page'
-  res.render('show', {content: title})
-})
+app.get('/:pageName', (req, res) => {
+  const pageName = req.params.pageName
 
+  res.render('index', { pageName })
+})
 
 // set up express listener
 app.listen(port, ()=>{
